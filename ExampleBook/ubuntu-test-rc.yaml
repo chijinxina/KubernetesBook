@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: ubuntu-test
+  labels:
+    name: ubuntu-test
+spec:
+  replicas: 1
+  selector:
+    name: ubuntu-test
+  template:
+    metadata:
+      labels:
+        name: ubuntu-test
+    spec:
+      containers:
+      - name: ubuntu-test
+        image: ubuntu-test:v1213-2
+        command: ['/root/test.sh']
+      
+
