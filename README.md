@@ -2,7 +2,11 @@
 Learning Kubernetes with kubeadm
 
 ## issue1
-+ **coreDNS故障，codeDNS POD -> crashLoop**
++ **coreDNS故障，codeDNS POD -> pending <<<<<**
++ *解决方法：* 
+ 1. kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+ 2. 查看codeDNS POD状态是否为CrashLoopBackOff，为CrashLoopBackOff执行下面操作
++ **coreDNS故障，codeDNS POD -> CrashLoopBackOff**
 + *解决方法：* 
  1. kubectl edit cm coredns -n kube-system
  2. 删除“loop”，保存退出后
