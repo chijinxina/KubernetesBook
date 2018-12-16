@@ -13,7 +13,7 @@ Learning Kubernetes with kubeadm
  3. 重启coreDNS POD： kubectl delete pod coredns-... -n kube-system
 
 ## issue2
-+ **dashboard没有权限**
++ **dashboard没有权限 XXX is forbidden: User "system:serviceaccount:kube-system:kubernetes-dashboard" cannot list resource "namespaces" in API group "" at the cluster scope**
 + *解决方法：* 
  1. kubectl create clusterrolebinding kubernetes-dashboard --cluster-admin --serviceaccount=kube-sytem:kubernetes-dashboard
 
