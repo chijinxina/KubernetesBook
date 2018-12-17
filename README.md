@@ -16,6 +16,7 @@ Learning Kubernetes with kubeadm
 + **dashboard没有权限 XXX is forbidden: User "system:serviceaccount:kube-system:kubernetes-dashboard" cannot list resource "namespaces" in API group "" at the cluster scope**
 + *解决方法：* 
  1. kubectl create clusterrolebinding kubernetes-dashboard --cluster-admin --serviceaccount=kube-sytem:kubernetes-dashboard
+ 2. 参考博客解决：https://segmentfault.com/a/1190000013681047  http://www.cnblogs.com/linuxk/p/9783510.html
 
 ## issue3
 + **nodes上无法启动pod（解除master上不运行pod的限制）**
